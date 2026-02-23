@@ -1,53 +1,70 @@
+:root {
+    --bg-black: #0a0a0a;
+    --matrix-green: #00ff41;
+    --dark-green: #003b11;
+}
+
 body {
-    background-color: #0d1117; /* لون غامق احترافي */
+    background-color: var(--bg-black);
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* الهيدر والقائمة */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid var(--dark-green);
+}
+
+.nav-logo { width: 50px; filter: drop-shadow(0 0 5px var(--matrix-green)); }
+
+nav a {
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-}
-
-header {
-    padding: 50px;
-    border-bottom: 2px solid #00ff41; /* لون أخضر Matrix */
-}
-
-.roadmap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.step {
-    display: flex;
-    align-items: center;
-    margin: 20px;
-    opacity: 0.6;
-}
-
-.step.active {
-    opacity: 1;
-    border: 1px solid #00ff41;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.circle {
-    width: 50px;
-    height: 50px;
-    background: #00ff41;
-    color: black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.btn {
-    background-color: #ff3e3e; /* أحمر مغربي */
-    color: white;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+nav a:hover { color: var(--matrix-green); }
+
+/* القسم الرئيسي */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle, #001a05 0%, #0a0a0a 100%);
+}
+
+.typewriter {
+    color: var(--matrix-green);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--matrix-green);
+}
+
+/* الأزرار النيون */
+.btn-neon {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--matrix-green);
+    color: var(--matrix-green);
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--dark-green);
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    background: var(--matrix-green);
+    color: black;
+    box-shadow: 0 0 30px var(--matrix-green);
 }
