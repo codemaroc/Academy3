@@ -1,70 +1,36 @@
-:root {
-    --bg-black: #0a0a0a;
-    --matrix-green: #00ff41;
-    --dark-green: #003b11;
-}
-
-body {
-    background-color: var(--bg-black);
-    color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* الهيدر والقائمة */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    border-bottom: 1px solid var(--dark-green);
-}
-
-.nav-logo { width: 50px; filter: drop-shadow(0 0 5px var(--matrix-green)); }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 14px;
-}
-
-nav a:hover { color: var(--matrix-green); }
-
-/* القسم الرئيسي */
-.hero-section {
-    text-align: center;
-    padding: 100px 20px;
-    background: radial-gradient(circle, #001a05 0%, #0a0a0a 100%);
-}
-
-.typewriter {
-    color: var(--matrix-green);
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.main-title {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px var(--matrix-green);
-}
-
-/* الأزرار النيون */
-.btn-neon {
+/* تنسيق عام لجميع الأزرار */
+.action-buttons .btn {
     display: inline-block;
     padding: 12px 30px;
-    border: 2px solid var(--matrix-green);
-    color: var(--matrix-green);
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 0 15px var(--dark-green);
-    transition: 0.3s;
+    border-radius: 5px; /* حواف منحنية قليلاً تعطي لمسة عصرية */
+    transition: 0.3s all ease;
+    margin: 10px;
+}
+
+/* الزر الأساسي (تصفح المسار) - إطار نيون */
+.btn-neon {
+    border: 2px solid #00ff41;
+    color: #00ff41;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
 .btn-neon:hover {
-    background: var(--matrix-green);
-    color: black;
-    box-shadow: 0 0 30px var(--matrix-green);
+    background: #00ff41;
+    color: #000;
+    box-shadow: 0 0 20px #00ff41;
+}
+
+/* الزر الثانوي (انضم إلينا) - متناسق وبدون إطار خلفي */
+.btn-outline {
+    border: 2px solid transparent; /* ليكون بنفس حجم الزر الآخر */
+    color: #ffffff;
+    border-bottom: 2px solid #00ff41; /* خط سفلي فقط للتميز */
+}
+
+.btn-outline:hover {
+    color: #00ff41;
+    border: 2px solid #00ff41; /* يتحول لإطار كامل عند مرور الفأرة */
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
 }
