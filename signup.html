@@ -1,6 +1,6 @@
 <body class="signup-page">
     <div class="form-container">
-        <h2 style="color: var(--neon-green); text-align: center;">إنشاء حساب محارب جديد</h2>
+        <h2 style="text-align: center; color: white;">إنشاء حساب محارب جديد</h2>
         <form id="registrationForm">
             <div class="input-group">
                 <label>الاسم الشخصي</label>
@@ -9,6 +9,10 @@
             <div class="input-group">
                 <label>الاسم العائلي</label>
                 <input type="text" id="lname" placeholder="النسب" required>
+            </div>
+            <div class="input-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
             </div>
             <div class="input-group">
                 <label>المدينة</label>
@@ -20,9 +24,7 @@
             </div>
             <button type="submit" class="btn">تأكيد التسجيل وحفظ البيانات</button>
         </form>
-        <p style="text-align: center; margin-top: 15px; font-size: 0.8rem;">
-            لديك حساب؟ <a href="login.html" style="color: var(--neon-green);">تسجيل الدخول</a>
-        </p>
+        <a href="index.html" class="back-link">العودة للرئيسية</a>
     </div>
     <script src="script.js"></script>
 </body>
