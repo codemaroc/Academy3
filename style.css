@@ -123,4 +123,59 @@ body {
 @media (max-width: 768px) {
     .main-title { font-size: 2.2rem; }
     .action-buttons { flex-direction: column; align-items: center; }
+
+}
+/* تنسيق صفحة التسجيل */
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #001a05 0%, #050505 70%);
+}
+
+.form-container {
+    background: rgba(10, 10, 10, 0.9);
+    padding: 40px;
+    border: 1px solid var(--dark-green);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+.input-group {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00ff41;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid var(--dark-green);
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
 }
