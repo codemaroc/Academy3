@@ -1,4 +1,4 @@
-/* إعدادات عامة */
+/* إعدادات الألوان والخطوط */
 :root {
     --bg-black: #050505;
     --neon-green: #00ff41;
@@ -10,77 +10,97 @@ body {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-/* تنسيق حاوية النماذج (Forms) */
-.form-container {
-    background: rgba(15, 15, 15, 0.95);
-    padding: 30px;
-    border: 1px solid var(--dark-green);
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    margin-top: 50px;
-    box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+/* شريط التنقل العلوي */
+.navbar {
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--dark-green);
+    text-align: center;
 }
 
-/* تنظيم الحقول (Input Groups) */
-.input-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column; /* جعل العنوان فوق الحقل */
-    text-align: right;
-}
-
-.input-group label {
-    margin-bottom: 8px;
-    color: var(--neon-green);
+.navbar a {
+    color: white !important; /* لضمان عدم تغير اللون للبنفسجي */
+    text-decoration: none;
+    margin: 0 15px;
     font-size: 0.9rem;
 }
 
-.input-group input {
-    padding: 12px;
-    background: #111;
-    border: 1px solid var(--dark-green);
-    color: white;
-    border-radius: 4px;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box; /* لضمان عدم خروج الحقل عن الإطار */
+.navbar a:hover { color: var(--neon-green) !important; }
+
+/* القسم الرئيسي (Hero) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
 }
 
-.input-group input:focus {
-    border-color: var(--neon-green);
-    box-shadow: 0 0 5px var(--neon-green);
+.hero img {
+    width: 250px;
+    filter: drop-shadow(0 0 10px var(--neon-green));
 }
 
-/* تنسيق الأزرار */
+.main-title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 0 0 10px var(--neon-green);
+}
+
+/* حل مشكلة الأزرار المتداخلة */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding-bottom: 50px; /* مسافة أمان لشريط المهام */
+}
+
 .btn {
-    width: 100%;
-    padding: 12px;
-    cursor: pointer;
+    padding: 12px 30px;
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green) !important;
+    text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
-    border: 2px solid var(--neon-green);
-    background: transparent;
-    color: var(--neon-green);
     transition: 0.3s;
 }
 
 .btn:hover {
     background: var(--neon-green);
-    color: black;
-    box-shadow: 0 0 15px var(--neon-green);
+    color: black !important;
+    box-shadow: 0 0 20px var(--neon-green);
 }
 
-.back-link {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    color: #888;
-    text-decoration: none;
+/* تنسيق النماذج (التسجيل والدخول) */
+.form-container {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--dark-green);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.input-group label { display: block; margin-bottom: 8px; color: var(--neon-green); }
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: #050505;
+    border: 1px solid var(--dark-green);
+    color: white;
+    box-sizing: border-box;
 }
