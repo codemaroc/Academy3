@@ -1,14 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.btn');
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // منع الصفحة من التحديث المفاجئ
 
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', (e) => {
-            // إضافة تأثير عند الضغط
-            const step = button.closest('.step');
-            step.style.boxShadow = "0 0 20px #00ff41";
-            
-            // تنبيه بسيط للمستخدم (يمكن استبداله بفتح الفيديو لاحقاً)
-            console.log("تم اختيار الدرس: " + (index + 1));
-        });
-    });
+    // إظهار رسالة نجاح احترافية
+    alert('مرحباً بك في Code Maroc! تم تسجيل حسابك بنجاح.');
+
+    // توجيه المستخدم لصفحة تسجيل الدخول بعد ثانيتين
+    setTimeout(function() {
+        window.location.href = 'login.html';
+    }, 2000);
 });
