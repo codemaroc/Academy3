@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="nav-links">
-            <a href="login.html" class="btn-login-small">تسجيل الدخول</a>
+        <div class="nav-container">
+            <a href="index.html">الرئيسية</a>
             <a href="#roadmap">المسارات</a>
-            <a href="#">الرئيسية</a>
+            <a href="login.html">تسجيل الدخول</a>
         </div>
-        <img src="logo.jpg" alt="Logo" class="nav-logo">
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <p class="console-text">system_init("Code_Maroc_Academy");</p>
+            <img src="logo.jpg" alt="Code Maroc Logo" class="hero-logo">
+            
+            <p class="console-text">;system_init("Code_Maroc_Academy")</p>
+            
             <h1 class="main-title">تعلم الأمن السيبراني بالدارجة</h1>
             <p class="description">منصة مغربية متخصصة في تعليم البرمجة واختبار الاختراق من الصفر للاحتراف.</p>
             
@@ -30,23 +33,30 @@
     </header>
 
     <main id="roadmap" class="roadmap-container">
+        <h2 class="section-title">مسار التعلم</h2>
+        
         <div class="step">
-            <div class="circle">1</div>
-            <div class="content">
+            <div class="step-number">1</div>
+            <div class="step-content">
                 <h3>أساسيات الحاسوب والأمن</h3>
                 <p>تعرف على كيفاش كيخدم الانترنت وأنظمة التشغيل.</p>
                 <a href="#" class="btn-lesson">شاهد الدرس</a>
             </div>
         </div>
+
         <div class="step active">
-            <div class="circle">2</div>
-            <div class="content">
+            <div class="step-number">2</div>
+            <div class="step-content">
                 <h3>تعلم لغة Python</h3>
                 <p>بدايتك الحقيقية في البرمجة وتطوير الأدوات.</p>
                 <a href="#" class="btn-lesson">شاهد الدرس</a>
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Code Maroc Academy - جميع الحقوق محفوظة</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
