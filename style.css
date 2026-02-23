@@ -1,89 +1,126 @@
-/* تنسيق عام لجميع الأزرار */
-.action-buttons .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px; /* حواف منحنية قليلاً تعطي لمسة عصرية */
-    transition: 0.3s all ease;
-    margin: 10px;
+/* إعدادات عامة */
+:root {
+    --bg-black: #050505;
+    --neon-green: #00ff41;
+    --dark-green: #003b11;
+    --text-white: #ffffff;
 }
 
-/* الزر الأساسي (تصفح المسار) - إطار نيون */
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* تنسيق شريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--dark-green);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-green);
+}
+
+.nav-logo {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 0 5px var(--neon-green));
+}
+
+/* تنسيق القسم الرئيسي */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #001a05 0%, #050505 70%);
+}
+
+.console-text {
+    color: var(--neon-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 15px var(--neon-green);
+}
+
+.description {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #cccccc;
+    font-size: 1.2rem;
+}
+
+/* تنسيق الأزرار الموحد */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    padding: 12px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: 0.4s all ease;
+    min-width: 160px;
+    display: inline-block;
+}
+
+/* زر النيون الأخضر */
 .btn-neon {
-    border: 2px solid #00ff41;
-    color: #00ff41;
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
 .btn-neon:hover {
-    background: #00ff41;
+    background-color: var(--neon-green);
     color: #000;
-    box-shadow: 0 0 20px #00ff41;
+    box-shadow: 0 0 30px var(--neon-green);
 }
 
-/* الزر الثانوي (انضم إلينا) - متناسق وبدون إطار خلفي */
+/* زر الانضمام المتناسق والواضح */
 .btn-outline {
-    border: 2px solid transparent; /* ليكون بنفس حجم الزر الآخر */
-    color: #ffffff;
-    border-bottom: 2px solid #00ff41; /* خط سفلي فقط للتميز */
+    border: 2px solid var(--text-white);
+    color: var(--text-white);
 }
 
 .btn-outline:hover {
-    color: #00ff41;
-    border: 2px solid #00ff41; /* يتحول لإطار كامل عند مرور الفأرة */
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
-}
-/* تأكد من ضبط الخلفية أولاً */
-body {
-    background-color: #0a0a0a !important; /* لون أسود عميق */
-    color: white;
-    margin: 0;
-    padding: 0;
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+    box-shadow: 0 0 20px var(--neon-green);
 }
 
-/* تنسيق حاوية الأزرار */
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* مسافة متساوية بين الزرين */
-    margin-top: 30px;
-}
-
-/* تنسيق موحد للأزرار */
-.btn {
-    display: inline-block;
-    padding: 12px 35px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.4s all;
-    text-align: center;
-    min-width: 160px; /* توحيد عرض الزرين */
-}
-
-/* زر تصفح المسار (الأخضر المضيء) */
-.btn-neon {
-    border: 2px solid #00ff41;
-    color: #00ff41;
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
-}
-
-.btn-neon:hover {
-    background: #00ff41;
-    color: #000;
-    box-shadow: 0 0 25px #00ff41;
-}
-
-/* زر انضم إلينا (واضح ومتناسق) */
-.btn-outline {
-    border: 2px solid #ffffff; /* إطار أبيض واضح */
-    color: #ffffff;
-}
-
-.btn-outline:hover {
-    border-color: #00ff41;
-    color: #00ff41;
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+/* تحسينات للهواتف */
+@media (max-width: 768px) {
+    .main-title { font-size: 2.2rem; }
+    .action-buttons { flex-direction: column; align-items: center; }
 }
