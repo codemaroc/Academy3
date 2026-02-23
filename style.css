@@ -3,6 +3,7 @@
     --bg-black: #050505;
     --neon-green: #00ff41;
     --dark-green: #003b11;
+    --error-red: #ff4b2b;
 }
 
 body {
@@ -11,100 +12,72 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-/* شريط التنقل */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    border-bottom: 1px solid var(--dark-green);
-    background-color: rgba(0, 0, 0, 0.9);
+/* إصلاح تداخل النماذج (Forms) */
+.form-container {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 40px;
+    border: 1px solid var(--dark-green);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    margin: 50px auto;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
 }
 
-.nav-logo { width: 50px; filter: drop-shadow(0 0 5px var(--neon-green)); }
+.input-group {
+    margin-bottom: 25px;
+    text-align: right;
+}
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--neon-green);
     font-size: 0.9rem;
 }
 
-/* القسم الرئيسي */
-.hero {
-    padding: 100px 20px;
-    text-align: center;
-    background: radial-gradient(circle at center, #001a05 0%, #050505 70%);
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid var(--dark-green);
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box; /* يمنع خروج الحقول عن الإطار */
+    transition: 0.3s;
 }
 
-.main-title {
-    font-size: 3rem;
-    text-shadow: 0 0 15px var(--neon-green);
-    margin: 10px 0;
+.input-group input:focus {
+    outline: none;
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
 }
-
-.console-text { color: var(--neon-green); font-family: monospace; font-size: 1.2rem; }
 
 /* تنسيق الأزرار الاحترافي */
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
 .btn {
-    padding: 12px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.4s;
-    min-width: 160px;
-}
-
-.btn-neon {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
     border: 2px solid var(--neon-green);
     color: var(--neon-green);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
-.btn-neon:hover {
+.btn:hover {
     background: var(--neon-green);
     color: black;
     box-shadow: 0 0 25px var(--neon-green);
 }
 
 .btn-outline {
-    border: 2px solid white;
+    border-color: white;
     color: white;
-}
-
-.btn-outline:hover {
-    border-color: var(--neon-green);
-    color: var(--neon-green);
-    box-shadow: 0 0 15px var(--neon-green);
-}
-
-/* ستايل خريطة الطريق (Roadmap) */
-.roadmap-container { padding: 50px 10%; }
-.step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    border: 1px solid var(--dark-green);
-    padding: 20px;
-    border-radius: 8px;
-}
-.step.active { border-color: var(--neon-green); box-shadow: 0 0 10px var(--dark-green); }
-.circle {
-    width: 40px; height: 40px;
-    background: var(--neon-green);
-    color: black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    margin-left: 20px;
 }
