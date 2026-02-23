@@ -1,11 +1,18 @@
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // منع الصفحة من التحديث المفاجئ
+    e.preventDefault(); // منع الصفحة من التحديث
 
-    // إظهار رسالة نجاح احترافية
-    alert('مرحباً بك في Code Maroc! تم تسجيل حسابك بنجاح.');
+    // جمع البيانات من الحقول
+    const userData = {
+        firstName: document.getElementById('fname').value,
+        lastName: document.getElementById('lname').value,
+        email: document.getElementById('email').value,
+        city: document.getElementById('city').value
+    };
 
-    // توجيه المستخدم لصفحة تسجيل الدخول بعد ثانيتين
-    setTimeout(function() {
-        window.location.href = 'login.html';
-    }, 2000);
+    // حفظ البيانات مؤقتاً في المتصفح
+    localStorage.setItem('warriorUser', JSON.stringify(userData));
+
+    // إظهار رسالة نجاح وتوجيه المستخدم لصفحة الدخول
+    alert('تم تسجيلك بنجاح يا محارب! سيتم توجيهك لصفحة الدخول الآن.');
+    window.location.href = 'login.html';
 });
