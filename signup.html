@@ -1,41 +1,28 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إنشاء حساب محارب جديد | Code Maroc</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body class="signup-page">
     <div class="form-container">
-        <h2 class="neon-text">إنشاء حساب محارب جديد</h2>
+        <h2 style="color: var(--neon-green); text-align: center;">إنشاء حساب محارب جديد</h2>
         <form id="registrationForm">
             <div class="input-group">
                 <label>الاسم الشخصي</label>
                 <input type="text" id="fname" placeholder="مثلاً: ياسين" required>
             </div>
             <div class="input-group">
-                <label>الاسم العائلي (النسب)</label>
+                <label>الاسم العائلي</label>
                 <input type="text" id="lname" placeholder="النسب" required>
             </div>
             <div class="input-group">
-                <label>البريد الإلكتروني</label>
-                <input type="email" id="email" placeholder="example@mail.com" required>
-            </div>
-            <div class="input-group">
                 <label>المدينة</label>
-                <input type="text" id="city" placeholder="مثلاً: الدار البيضاء" required>
+                <input type="text" id="city" placeholder="الدار البيضاء" required>
             </div>
             <div class="input-group">
                 <label>كلمة المرور</label>
                 <input type="password" id="password" placeholder="أدخل كلمة مرور قوية" required>
             </div>
-            <button type="submit" class="btn btn-neon">تأكيد التسجيل وحفظ البيانات</button>
+            <button type="submit" class="btn">تأكيد التسجيل وحفظ البيانات</button>
         </form>
-        
-        <p class="login-redirect">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
-        <a href="index.html" class="back-link">العودة للرئيسية</a>
+        <p style="text-align: center; margin-top: 15px; font-size: 0.8rem;">
+            لديك حساب؟ <a href="login.html" style="color: var(--neon-green);">تسجيل الدخول</a>
+        </p>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
