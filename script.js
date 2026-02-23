@@ -1,18 +1,25 @@
-document.getElementById('registrationForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // منع الصفحة من التحديث
+document.addEventListener('DOMContentLoaded', () => {
+    // تفعيل نموذج التسجيل إذا كان المستخدم في صفحة signup.html
+    const regForm = document.getElementById('registrationForm');
+    
+    if (regForm) {
+        regForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // محاكاة حفظ البيانات وإظهار رسالة نجاح
+            const name = document.getElementById('fname').value;
+            alert(`مرحباً بك يا ${name}! تم تسجيل حسابك بنجاح في Code Maroc.`);
+            
+            // التوجيه لصفحة تسجيل الدخول
+            window.location.href = 'login.html';
+        });
+    }
 
-    // جمع البيانات من الحقول
-    const userData = {
-        firstName: document.getElementById('fname').value,
-        lastName: document.getElementById('lname').value,
-        email: document.getElementById('email').value,
-        city: document.getElementById('city').value
-    };
-
-    // حفظ البيانات مؤقتاً في المتصفح
-    localStorage.setItem('warriorUser', JSON.stringify(userData));
-
-    // إظهار رسالة نجاح وتوجيه المستخدم لصفحة الدخول
-    alert('تم تسجيلك بنجاح يا محارب! سيتم توجيهك لصفحة الدخول الآن.');
-    window.location.href = 'login.html';
+    // تأثير بسيط عند الضغط على أزرار الدروس
+    const lessonBtns = document.querySelectorAll('.btn-lesson');
+    lessonBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            console.log("تم فتح الدرس...");
+        });
+    });
 });
