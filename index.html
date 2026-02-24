@@ -9,19 +9,20 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html">الرئيسية</a>
-            <a href="#roadmap">المسارات</a>
-            <a href="login.html">تسجيل الدخول</a>
+    <div class="nav-container">
+        <div id="user-area">
+            <a href="login.html" class="btn-login-small">تسجيل الدخول</a>
         </div>
-    </nav>
+        
+        <a href="#roadmap">المسارات</a>
+        <a href="index.html">الرئيسية</a>
+    </div>
+</nav>
 
     <header class="hero">
         <div class="hero-content">
             <img src="logo.jpg" alt="Code Maroc Logo" class="hero-logo">
-            
             <p class="console-text">;system_init("Code_Maroc_Academy")</p>
-            
             <h1 class="main-title">تعلم الأمن السيبراني بالدارجة</h1>
             <p class="description">منصة مغربية متخصصة في تعليم البرمجة واختبار الاختراق من الصفر للاحتراف.</p>
             
@@ -32,24 +33,26 @@
         </div>
     </header>
 
-    <main id="roadmap" class="roadmap-container">
-        <h2 class="section-title">مسار التعلم</h2>
+    <main id="roadmap" class="roadmap-section">
+        <h2 class="section-title">خارطة طريق المحارب</h2>
         
-        <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-content">
-                <h3>أساسيات الحاسوب والأمن</h3>
-                <p>تعرف على كيفاش كيخدم الانترنت وأنظمة التشغيل.</p>
-                <a href="#" class="btn-lesson">شاهد الدرس</a>
+        <div class="roadmap-container">
+            <div class="v-line"></div> <div class="roadmap-step">
+                <div class="step-circle neon-glow">1</div>
+                <div class="step-card">
+                    <h3>أساسيات الحاسوب والأمن</h3>
+                    <p>تعرف على كيفاش كيخدم الانترنت وأنظمة التشغيل والشبكات.</p>
+                    <a href="#" class="btn-mini">شاهد الدرس</a>
+                </div>
             </div>
-        </div>
 
-        <div class="step active">
-            <div class="step-number">2</div>
-            <div class="step-content">
-                <h3>تعلم لغة Python</h3>
-                <p>بدايتك الحقيقية في البرمجة وتطوير الأدوات.</p>
-                <a href="#" class="btn-lesson">شاهد الدرس</a>
+            <div class="roadmap-step active">
+                <div class="step-circle neon-glow pulse">2</div>
+                <div class="step-card highlight">
+                    <h3>تعلم لغة Python</h3>
+                    <p>بدايتك الحقيقية في البرمجة وتطوير أدوات الحماية والاختراق.</p>
+                    <a href="#" class="btn-mini pulse">ابدأ الآن</a>
+                </div>
             </div>
         </div>
     </main>
